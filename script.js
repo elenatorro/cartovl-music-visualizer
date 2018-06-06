@@ -123,6 +123,6 @@ $musicSelectorButtons.forEach(function ($button, index) {
     $button.classList.add('selected');
 
     stopSong(animationFrameId);
-    loadSong(`songs/${musicType}.${audioFormat}`, musicType);
+    loadSong(`https://raw.githubusercontent.com/elenatorro/cartovl-music-visualizer/master/songs/${musicType}.${audioFormat}`, musicType);
   });
 });
