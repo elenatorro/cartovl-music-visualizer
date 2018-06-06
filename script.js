@@ -38,6 +38,7 @@ function loadSong(fileSrc, musicType) {
   var lastStrokeWidth;
 
   audio.src = fileSrc;
+  audio.crossOrigin = 'anonymous';
   audio.load();
   audio.play();
 
