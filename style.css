@@ -1,0 +1,69 @@
+#map {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#content {
+  background-color: transparent
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+#sidebar {
+  background-color: transparent;
+  height: auto;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 300px;
+}
+
+#audio {
+  display: none;
+}
+
+ul {
+  background-color: transparent;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  background-color: transparent;
+  border: 0;
+  box-sizing: content-box;
+  padding: 0;
+  width: 100%;
+}
+
+.button-music-selector {
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  margin: 0;
+  padding: .8em;
+  text-align: left;
+  width: 100%;
+}
+
+.button-music-selector:focus,
+.button-music-selector:active {
+  outline: none
+}
+
+.selected {
+  background-color: white;
+  border: 0;
+  box-sizing: border-box;
+  margin: .5em;
+  width: 100%;
+}

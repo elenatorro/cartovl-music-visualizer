@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spain Nightclubs</title>
+
+  <script src="https://cartodb.github.io/carto-vl/dist/carto-vl.js"></script>
+  <script src="https://libs.cartocdn.com/mapbox-gl/v0.45.0-carto1/mapbox-gl.js"></script>
+  <link href="https://libs.cartocdn.com/mapbox-gl/v0.45.0-carto1/mapbox-gl.css" rel="stylesheet" />
+  <link href="https://carto.com/developers/carto-vl/examples/maps/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <aside id="sidebar">
+    <div id="content">
+      <section id="nightclub"></section>
+
+      <ul>
+        <li><button class="button-music-selector" data-music-type="pop" data-music-format="mp3">🎙️Pop</button></li>
+        <li><button class="button-music-selector" data-music-type="electronic" data-music-format="mp3">🎹 Electronic</button></li>
+        <li><button class="button-music-selector" data-music-type="rocknroll" data-music-format="mp3">🎸 Rock n' Roll</button></li>
+        <li><button class="button-music-selector" data-music-type="classic" data-music-format="mp3">🎻 Classical</button></li>
+        <li><button class="button-music-selector" data-music-type="heavymetal" data-music-format="mp3">🤘Heavy Metal</button></li>
+        <li><button class="button-music-selector" data-music-type="dance" data-music-format="mp3">🕺 Dance</button></li>
+        <li><button class="button-music-selector" data-music-type="blues" data-music-format="mp3">🎷 Blues</button></li>
+        <li><button class="button-music-selector" data-music-type="latino" data-music-format="mp3">💃 Latino</button></li>
+        <li><button class="button-music-selector" data-music-type="trash" data-music-format="mp3">🤘Trash</button></li>
+        <li><button class="button-music-selector" data-music-type="folk" data-music-format="mp3">🎵 Folk</button></li>
+        <li><button class="button-music-selector" data-music-type="indie" data-music-format="mp3">🎤 Indie</button></li>
+        <li><button class="button-music-selector" data-music-type="salsa" data-music-format="mp3">🎺 Salsa</button></li>
+        <li><button class="button-music-selector" data-music-type="disco" data-music-format="mp3">💿 Disco</button></li>
+        <li><button class="button-music-selector" data-music-type="rap" data-music-format="mp3">🧢 Rap</button></li>
+      </ul>
+
+      <audio id="audio" controls="controls"></audio>
+    </div>
+  </aside>
+
+  <script src=script.js></script>
+</body>
+
+</html>
