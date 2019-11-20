@@ -35,7 +35,6 @@ function loadSong(fileSrc, musicType) {
   var analyser = context.createAnalyser();
   var lastColor;
   var lastWidth;
-  var lastStrokeWidth;
 
   audio.src = fileSrc;
   audio.crossOrigin = 'anonymous';
@@ -58,21 +57,9 @@ function loadSong(fileSrc, musicType) {
     var frequency = dataArray[10];
 
     lastWidth = `linear(${frequency}, 0, 255) * 50`;
-    lastStrokeWidth = `linear(${frequency}, 0, 255) * 8`;
-    lastColor = `rgb(
-                      torque(0.5, 5, fade(2.5, 2.5)) * 255,
-                      torque(0.5, 3, fade(1.5, 1.5)) * 255,
-                      torque(0.5, 7, fade(3.5, 3.5)) * 255
-                    )`;
-
-    layer.blendToViz(new carto.Viz(`
-        width: ${lastWidth}
-        strokeWidth: 8
-        strokeColor: opacity(${lastColor}, 0.9)
-        color: opacity(${lastColor}, 0.5)
-        filter: eq($music_type, '${musicType}') or false
-      `), 0);
-}
+    layer.viz.width.blendTo(lastWidth, 0);
+    layer.viz.filter.blendTo(`eq($music_type, '${musicType}') or false`, 0);
+  }
 
   audio.addEventListener('play', onPlay);
   audio.addEventListener('pause', onPause);
